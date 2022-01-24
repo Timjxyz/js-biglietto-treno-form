@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form biglietto del treno</title>
+</head>
+<body>
+    <!-- Titolo della pagina -->
+    <header>
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+    </header>
+
+    <main>
+        <!-- Sezione per compilazione form biiglietto -->
+        <section>
+            
+            <!-- Inserisci il tuo nome e cognome -->
+            <div class="d-flex top-section" >
+                <form class="d-flex form-input">
+                    <div class=" d-flex text-input">
+                        <label for="username">Nome e Cognome</label>
+                        <input class="ms-input" type="text" id="username" name="username" >
+    
+                    </div>
+
+                    <!-- Inserisci i km da percorrere -->
+                    <div class=" d-flex text-input">
+                        <label for="distanza">Km da percorrere</label>
+                        <input class="ms-input" type="number" id="distanza" name="distanza" min="1" max="500">
+    
+                    </div>
+    
+                    <!-- Seleziona la tua fascia d'età -->
+                    <div class=" d-flex text-input">
+                        <label for="cars">Fascia d'età</label>
+                        <select class="ms-input" name="cars" id="età">
+                            <option value=""></option>
+                            <option value="maggiorenne">Maggiorenne</option>
+                            <option id="eta-minori" value="minorenne">Minorenne</option>
+                            <option id="eta-pensionati" value="over-66">Over 66</option>
+                        </select>
+    
+                    </div>            
+                </form> 
+            </div>
+
+            <!-- Bottone genera biglietto annulla biglietto -->
+            <div class="btn-group d-flex">
+                <button id="genera" class="btn">Genera</button>
+                <button id="annulla" class="btn">Annulla</button>
+    
+            </div>
+            
+            
+        </section>
+
+
+        <!-- Sezione per stampa del biglietto -->
+        <h1>IL TUO BIGLIETTO</h1>
+        <section class="p-10 border-radius-0 d-none">
+            <div class="d-flex ">
+                <h2 class="title-ticket">Dettaglio Passeggeri</h2>
+            </div>
+
+            <!-- Visualizzazione del biflietto -->
+            <div class="container d-flex">
+
+                <!-- Parte sinistra del biglietto -->
+
+                <!-- Nome del passeggero -->
+                <div class="parte-sx ">
+                    <div  class="h1 mt-10">NOME PASSEGGERO</div>
+                    <div class="h2" id="name"></div>
+                </div>
+
+                <!-- Parte destra del biglietto -->
+                <div class="parte-dx d-flex mt-10">
+                    <!-- Tipo di biglietto -->
+                    <div class="d-flex flex-col">
+                        <strong>Offerta</strong>
+                        <div class="mt-50" id="type-ticket"></div>
+                    </div>
+
+                    <div class="d-flex flex-col">
+                        <strong>Carrozza</strong>
+                        <div class="mt-50" id="carrozza"></div>
+                    </div>
+
+                    <div class="d-flex flex-col">
+                        <strong>Codice CP</strong>
+                        <div class="mt-50" id="codice-cp"></div>
+                    </div>
+
+                    <div class="d-flex flex-col">
+                        <strong>Costo biglietto</strong>
+                        <div class="mt-50" id="price-ticket"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
