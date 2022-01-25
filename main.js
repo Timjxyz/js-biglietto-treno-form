@@ -28,7 +28,7 @@ button.addEventListener('click',
             document.getElementById('carrozza').innerHTML = ( Math.floor( Math.random() * 10 ) );
             document.getElementById('codice-cp').innerHTML = ( Math.floor( Math.random() * 9999 + 90000 ) );
 
-            if (etaMinori=etaViaggiatore){
+            if (etaViaggiatore.value=="minorenne"){
                 //Prezzo del biglietto se sono minori
                 let distanza =document.getElementById ('distanza').value;
                 let prezzoPerKm = 0.21;
@@ -39,7 +39,7 @@ button.addEventListener('click',
                 document.getElementById('price-ticket').innerHTML =prezzoMinorenni.toFixed(2) + '€';
                 
                 
-            } else if(etaPensionati=etaViaggiatore){
+            } else if(etaViaggiatore.value=="over-66"){
                 //Prezzo del biglietto se sono pensionati
                 let distanza =document.getElementById ('distanza').value;
                 let prezzoPerKm = 0.21;
