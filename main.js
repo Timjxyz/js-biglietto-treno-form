@@ -12,14 +12,10 @@ let buttonReset= document.getElementById("annulla")
 //Bottone genera biglietto
 let button = document.getElementById("genera");
 
-//opzioni delle varie età
-let etaMinori=document.getElementById("eta-minori");
-let etaPensionati=document.getElementById("eta-pensionati");
-
 button.addEventListener('click',    
     function() {
 
-        if (etaViaggiatore.value == "" || name.value=="") {
+        if (etaViaggiatore.value == "" || name.value=="" || etaViaggiatore.value=="") {
             alert("Completa tutti i campi mancanti.");
         } else {
             //Visualizzazione biglietto numero di carrozza e vagone
