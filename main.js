@@ -61,7 +61,11 @@ button.addEventListener('click',
 
 buttonReset.addEventListener('click',
     function(){
-        buttonReset= window.location.reload();
+        
+        ticket.classList.remove('active');
+        document.getElementById('username').value= "";
+        document.getElementById ("età").value="";
+        document.getElementById ('distanza').value="";
     }
 
 );
