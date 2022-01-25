@@ -21,13 +21,13 @@ button.addEventListener('click',
             //Visualizzazione biglietto numero di carrozza e vagone
             ticket.classList.add('active');
             document.getElementById('name').innerHTML = username.value;
-            document.getElementById('carrozza').innerHTML = ( Math.floor( Math.random() * 10 ) );
-            document.getElementById('codice-cp').innerHTML = ( Math.floor( Math.random() * 9999 + 90000 ) );
+            document.getElementById('carrozza').innerHTML = ( Math.floor( Math.random() * 9 ) + 1 );
+            document.getElementById('codice-cp').innerHTML = ( Math.floor( Math.random() * 10000) + 90000 );
+            let prezzoPerKm = 0.21;
 
             if (etaViaggiatore.value=="minorenne"){
                 //Prezzo del biglietto se sono minori
                 let distanza =document.getElementById ('distanza').value;
-                let prezzoPerKm = 0.21;
                 let prezzoFinale = distanza * prezzoPerKm;
                 let scontoMinori = ((prezzoFinale * 20) /100);
                 prezzoMinorenni = prezzoFinale - scontoMinori;
@@ -38,7 +38,6 @@ button.addEventListener('click',
             } else if(etaViaggiatore.value=="over-66"){
                 //Prezzo del biglietto se sono pensionati
                 let distanza =document.getElementById ('distanza').value;
-                let prezzoPerKm = 0.21;
                 let prezzoFinale = distanza * prezzoPerKm;
                 let scontoPensionati = ((prezzoFinale * 40) /100);
                 let prezzoPensionati = prezzoFinale - scontoPensionati;
@@ -49,7 +48,6 @@ button.addEventListener('click',
             }
             else{
                 let distanza =document.getElementById ('distanza').value;
-                let prezzoPerKm = 0.21;
                 let prezzoFinale = distanza * prezzoPerKm;
                 document.getElementById('type-ticket').innerHTML ='Biglietto Standard';
                 document.getElementById('price-ticket').innerHTML =prezzoFinale.toFixed(2) + '€';

@@ -24,6 +24,9 @@ body{
 .mt-50{
     margin-top: 50px;
 }
+.mb-40{
+    margin-bottom: 40px;
+}
 
 
 .h1{
@@ -130,6 +133,7 @@ label{
     background-color: grey;
     min-width: 300px;
     padding-left: 20px;
+    min-height: 115px;
 }
 
 
